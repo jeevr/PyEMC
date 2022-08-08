@@ -20,6 +20,7 @@ class DataBase:
         try:
             f = self.get_db_root_path()
             path = f'{f}\database\makers.accdb'
+            print(path)
             return path
         except:
             return 'ERROR IN PARSING DATABASE PATH'
@@ -59,6 +60,23 @@ class DataBase:
             result = conn.execute(qry)
             data = result.fetchall()
         return data
+    
+    def get_data_for_filters(self, filter_1):
+        engine = self.connect_to_db()
+        mytable = self.instantiate_db_tables(engine, 'tbl_makers')
+        if filter_1 == 'MAKER':
+            qry = select(mytable.c.maker) ##==> RETURN CERTAIN COLUMNS
+        elif filter_1 == 'CATEGORY':
+            qry = select(mytable.c.category) ##==> RETURN CERTAIN COLUMNS
+        elif filter_1 == 'MODEL NO':
+            qry = select(mytable.c.model_no) ##==> RETURN CERTAIN COLUMNS
+        else:
+            return ''
+        print(qry)
+        with engine.connect() as conn:
+            result = conn.execute(qry)
+            data = result.fetchall()
+            return data
     
     def insert_new_category(self, category_name):
         engine = self.connect_to_db()
@@ -104,6 +122,7 @@ class DataBase:
             result = conn.execute(stmt)
 
     def retrieve_row_data(self, maker_id):
+        print('maker_id', maker_id)
         engine = self.connect_to_db()
         mytable = self.instantiate_db_tables(engine, 'tbl_makers')
 
@@ -113,9 +132,9 @@ class DataBase:
         # my_join = mytable_1.join(mytable_2, mytable_1.c.stdcons_id == mytable_2.c.stdcons_id)
         # qry = select([mytable_1, mytable_2]).select_from(my_join)
 
-        qry = select([mytable.c.id]).where(and_(mytable.c.stdcons_id == std_cons_id, mytable.c.shipno == ship_no, mytable.c.inputted_by == pc_name, mytable.c.consul_no == consulno)) ##==> RETURN CERTAIN COLUMNS
-
+        qry = mytable.select().where(mytable.c.id==maker_id) ##==> RETURN CERTAIN COLUMNS
+        print(qry)
         with engine.connect() as conn:
             result = conn.execute(qry)
-
             data = result.fetchall()
+        return data

@@ -1,17 +1,25 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainknKrfu.ui'
+## Form generated from reading UI file 'mainHCMjEW.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.2
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QComboBox, QFrame,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QListWidget, QListWidgetItem, QMainWindow, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -46,39 +54,66 @@ class Ui_MainWindow(object):
         self.body_2.setFrameShape(QFrame.StyledPanel)
         self.body_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.body_2)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.frm_buttons = QFrame(self.body_2)
         self.frm_buttons.setObjectName(u"frm_buttons")
+        self.frm_buttons.setMaximumSize(QSize(16777215, 50))
         self.frm_buttons.setFrameShape(QFrame.StyledPanel)
         self.frm_buttons.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frm_buttons)
+        self.horizontalLayout_3.setSpacing(6)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.btn_refresh = QPushButton(self.frm_buttons)
         self.btn_refresh.setObjectName(u"btn_refresh")
+        self.btn_refresh.setMinimumSize(QSize(0, 30))
         self.btn_refresh.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_3.addWidget(self.btn_refresh)
 
         self.btn_update = QPushButton(self.frm_buttons)
         self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setMinimumSize(QSize(0, 30))
         self.btn_update.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_3.addWidget(self.btn_update)
 
         self.btn_add = QPushButton(self.frm_buttons)
         self.btn_add.setObjectName(u"btn_add")
+        self.btn_add.setMinimumSize(QSize(0, 30))
         self.btn_add.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_3.addWidget(self.btn_add)
 
         self.btn_delete = QPushButton(self.frm_buttons)
         self.btn_delete.setObjectName(u"btn_delete")
+        self.btn_delete.setMinimumSize(QSize(0, 30))
         self.btn_delete.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_3.addWidget(self.btn_delete)
 
+        self.horizontalSpacer = QSpacerItem(200, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.verticalLayout.addWidget(self.frm_buttons)
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
+        self.label_10 = QLabel(self.frm_buttons)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setMinimumSize(QSize(0, 30))
+        self.label_10.setMaximumSize(QSize(16777215, 30))
+
+        self.horizontalLayout_3.addWidget(self.label_10)
+
+        self.lineEdit = QLineEdit(self.frm_buttons)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMinimumSize(QSize(300, 30))
+        self.lineEdit.setClearButtonEnabled(True)
+
+        self.horizontalLayout_3.addWidget(self.lineEdit)
+
+
+        self.verticalLayout.addWidget(self.frm_buttons, 0, Qt.AlignLeft)
 
         self.frm_table = QFrame(self.body_2)
         self.frm_table.setObjectName(u"frm_table")
@@ -86,6 +121,72 @@ class Ui_MainWindow(object):
         self.frm_table.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frm_table)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.frame_7 = QFrame(self.frm_table)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_5 = QVBoxLayout(self.frame_7)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.frame_8 = QFrame(self.frame_7)
+        self.frame_8.setObjectName(u"frame_8")
+        self.frame_8.setMaximumSize(QSize(16777215, 100))
+        self.frame_8.setFrameShape(QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_8)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.label_9 = QLabel(self.frame_8)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setMaximumSize(QSize(50, 16777215))
+
+        self.horizontalLayout_5.addWidget(self.label_9)
+
+        self.cbo_filter_1 = QComboBox(self.frame_8)
+        self.cbo_filter_1.setObjectName(u"cbo_filter_1")
+        self.cbo_filter_1.setMinimumSize(QSize(150, 30))
+        self.cbo_filter_1.setMaximumSize(QSize(16777215, 16777215))
+
+        self.horizontalLayout_5.addWidget(self.cbo_filter_1)
+
+        self.cbo_filter_2 = QComboBox(self.frame_8)
+        self.cbo_filter_2.setObjectName(u"cbo_filter_2")
+        self.cbo_filter_2.setMinimumSize(QSize(150, 30))
+
+        self.horizontalLayout_5.addWidget(self.cbo_filter_2)
+
+        self.horizontalSpacer_2 = QSpacerItem(50, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_2)
+
+        self.frame_9 = QFrame(self.frame_8)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setFrameShape(QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_9 = QHBoxLayout(self.frame_9)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.pushButton = QPushButton(self.frame_9)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setMinimumSize(QSize(0, 30))
+
+        self.horizontalLayout_9.addWidget(self.pushButton)
+
+        self.pushButton_2 = QPushButton(self.frame_9)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setMinimumSize(QSize(0, 30))
+
+        self.horizontalLayout_9.addWidget(self.pushButton_2)
+
+
+        self.horizontalLayout_5.addWidget(self.frame_9)
+
+
+        self.verticalLayout_5.addWidget(self.frame_8)
+
+
+        self.verticalLayout_2.addWidget(self.frame_7)
+
         self.tbl_1 = QTableWidget(self.frm_table)
         if (self.tbl_1.columnCount() < 9):
             self.tbl_1.setColumnCount(9)
@@ -134,12 +235,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.frame = QFrame(self.body_3)
         self.frame.setObjectName(u"frame")
+        self.frame.setMaximumSize(QSize(16777215, 50))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.frame)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.lbl_1 = QLabel(self.frame)
         self.lbl_1.setObjectName(u"lbl_1")
+        self.lbl_1.setMaximumSize(QSize(16777215, 16777215))
 
         self.horizontalLayout_6.addWidget(self.lbl_1)
 
@@ -156,25 +259,23 @@ class Ui_MainWindow(object):
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.lbl_2 = QLabel(self.frame_2)
         self.lbl_2.setObjectName(u"lbl_2")
-
-        self.horizontalLayout_5.addWidget(self.lbl_2)
-
+        self.lbl_2.setGeometry(QRect(10, 170, 111, 16))
         self.txt_db_path = QTextEdit(self.frame_2)
         self.txt_db_path.setObjectName(u"txt_db_path")
+        self.txt_db_path.setGeometry(QRect(130, 160, 664, 30))
         self.txt_db_path.setMaximumSize(QSize(16777215, 30))
-
-        self.horizontalLayout_5.addWidget(self.txt_db_path)
-
         self.btn_sel_db_path = QPushButton(self.frame_2)
         self.btn_sel_db_path.setObjectName(u"btn_sel_db_path")
+        self.btn_sel_db_path.setEnabled(True)
+        self.btn_sel_db_path.setGeometry(QRect(800, 160, 75, 30))
         self.btn_sel_db_path.setMaximumSize(QSize(16777215, 30))
-
-        self.horizontalLayout_5.addWidget(self.btn_sel_db_path)
-
+        self.btn_sel_db_path.setCheckable(False)
+        self.lbl_result = QLabel(self.frame_2)
+        self.lbl_result.setObjectName(u"lbl_result")
+        self.lbl_result.setGeometry(QRect(190, 210, 521, 31))
+        self.lbl_result.setStyleSheet(u"color: rgb(255, 0, 0);")
 
         self.verticalLayout_3.addWidget(self.frame_2)
 
@@ -193,21 +294,21 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(180, 110, 131, 16))
-        self.textEdit = QTextEdit(self.frame_3)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setGeometry(QRect(320, 110, 241, 31))
+        self.txt_new_cat_entry = QTextEdit(self.frame_3)
+        self.txt_new_cat_entry.setObjectName(u"txt_new_cat_entry")
+        self.txt_new_cat_entry.setGeometry(QRect(320, 110, 241, 31))
         self.btn_add_cat = QPushButton(self.frame_3)
         self.btn_add_cat.setObjectName(u"btn_add_cat")
         self.btn_add_cat.setGeometry(QRect(580, 110, 51, 31))
         self.btn_save_cat = QPushButton(self.frame_3)
         self.btn_save_cat.setObjectName(u"btn_save_cat")
         self.btn_save_cat.setGeometry(QRect(780, 510, 75, 31))
-        self.listWidget = QListWidget(self.frame_3)
-        self.listWidget.setObjectName(u"listWidget")
-        self.listWidget.setGeometry(QRect(320, 160, 241, 291))
-        self.pushButton = QPushButton(self.frame_3)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(320, 460, 101, 31))
+        self.lst_cat = QListWidget(self.frame_3)
+        self.lst_cat.setObjectName(u"lst_cat")
+        self.lst_cat.setGeometry(QRect(320, 160, 241, 291))
+        self.btn_remove_cat = QPushButton(self.frame_3)
+        self.btn_remove_cat.setObjectName(u"btn_remove_cat")
+        self.btn_remove_cat.setGeometry(QRect(320, 460, 101, 31))
         self.btn_cancel_cat = QPushButton(self.frame_3)
         self.btn_cancel_cat.setObjectName(u"btn_cancel_cat")
         self.btn_cancel_cat.setGeometry(QRect(30, 510, 75, 31))
@@ -331,7 +432,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -346,6 +447,12 @@ class Ui_MainWindow(object):
         self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Update Maker", None))
         self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add Maker", None))
         self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"Delete Maker", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.lineEdit.setInputMask("")
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"search maker here...", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Filter by:", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
         ___qtablewidgetitem = self.tbl_1.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.tbl_1.horizontalHeaderItem(1)
@@ -367,11 +474,12 @@ class Ui_MainWindow(object):
         self.lbl_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Database Connection Settings</span></p></body></html>", None))
         self.btn_back.setText(QCoreApplication.translate("MainWindow", u"Back", None))
         self.lbl_2.setText(QCoreApplication.translate("MainWindow", u"Database Folder Path", None))
-        self.btn_sel_db_path.setText(QCoreApplication.translate("MainWindow", u"change", None))
+        self.btn_sel_db_path.setText(QCoreApplication.translate("MainWindow", u"connect", None))
+        self.lbl_result.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"NEW CATEGORY NAME", None))
         self.btn_add_cat.setText(QCoreApplication.translate("MainWindow", u"add", None))
         self.btn_save_cat.setText(QCoreApplication.translate("MainWindow", u"Save", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Delete Category", None))
+        self.btn_remove_cat.setText(QCoreApplication.translate("MainWindow", u"Delete Category", None))
         self.btn_cancel_cat.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
         self.lbl_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Add New Maker / Update Maker</span></p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"MODEL NO", None))
@@ -390,6 +498,7 @@ class Ui_MainWindow(object):
         self.txt_id.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Auto generated</p></body></html>", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"ID", None))

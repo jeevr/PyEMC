@@ -1,4 +1,3 @@
-from email.mime import image
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
@@ -50,12 +49,12 @@ class MakerTable:
                 else:
                     self.ui.tbl_1.setItem(row_number, column_number, QTableWidgetItem(item))
 
-    
+
 
 def get_image_label(image_path):
     db = DataBase()
     root_path = db.get_db_root_path()
-    full_path = f'{root_path}\{image_path}'
+    full_path = f'{root_path}\\{image_path}'
     print(f'full path: {root_path} + {image_path}')
     print(full_path)
     pixmap = QPixmap(full_path)
