@@ -1,4 +1,5 @@
-
+from dataclasses import replace
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 from sqlalchemy import insert, Table, MetaData, select, delete, and_, or_
@@ -10,6 +11,7 @@ from sqlalchemy import insert, Table, MetaData, select, delete, and_, or_
 class DataBase:
     def __init__(self):
         self.db_path = self.get_db_path()
+        self.db_root_path = self.get_db_root_path()
 
     def get_db_root_path(self):
         f = open('_settings\database_path.txt', 'r')
@@ -86,6 +88,7 @@ class DataBase:
             result = conn.execute(stmt)
 
     def insert_new_maker(self, maker, category, model_no, description, remarks, symbol_link, maker_file_link, notes):
+
         engine = self.connect_to_db()
         mytable = self.instantiate_db_tables(engine, 'tbl_makers')
         stmt = mytable.insert().values( maker=maker,
@@ -99,19 +102,66 @@ class DataBase:
         with engine.connect() as conn:
             result = conn.execute(stmt)
 
+            new_id = result.inserted_primary_key[0]
+            
+            new_symbol = symbol_link.split('/')[-1]
+            # new_symbol_link = os.path.join('FILES', category, str(new_id), new_symbol_link)
+
+            new_maker_file = maker_file_link.split('/')[-1]
+            # new_maker_file_link = os.path.join('FILES', category, str(new_id), new_maker_file_link)
+
+            stmt_2 = mytable.update().where(mytable.c.id == new_id).values( symbol=new_symbol,
+                                                                            link=new_maker_file)
+            result_2 = conn.execute(stmt_2)
+
+            return new_id
+
+
     def update_maker_item(self, maker_id, maker, category, model_no, description, remarks, symbol_link, maker_file_link, notes):
         engine = self.connect_to_db()
         mytable = self.instantiate_db_tables(engine, 'tbl_makers')
-        stmt = mytable.update().where(mytable.c.id == maker_id).values( maker=maker,
-                                                                        category=category,
-                                                                        model_no=model_no,
-                                                                        description=description,
-                                                                        remarks=remarks,
-                                                                        symbol=symbol_link,
-                                                                        link=maker_file_link,
-                                                                        notes=notes)
+
+        qry = mytable.select().where(mytable.c.id==maker_id) ##==> RETURN CERTAIN COLUMNS
+        print(qry)
         with engine.connect() as conn:
-            result = conn.execute(stmt)
+            result = conn.execute(qry)
+            data = result.fetchall()
+            print(data)
+            old_symbol_link = data[0][6]
+            old_file_link = data[0][7]
+
+            symbol_link = symbol_link.replace('/', '\\')
+            maker_file_link = maker_file_link.replace('/', '\\')
+
+            if old_symbol_link in symbol_link:
+                symbol_link = old_symbol_link
+                print('THE SAME SYMBOL')
+            else:
+                symbol_link = symbol_link.split('/')[-1]
+                symbol_link = os.path.join('FILES', category, str(maker_id), symbol_link)
+
+            if old_file_link in maker_file_link:
+                maker_file_link = old_file_link
+                print('THE SAME FILE')
+            else:
+                maker_file_link = maker_file_link.split('/')[-1]
+                maker_file_link = os.path.join('FILES', category, str(maker_id), maker_file_link)
+
+            print('$$$$$$$$$$$$$ - OLD', old_symbol_link, old_file_link)
+            print('$$$$$$$$$$$$$ - NEW', symbol_link, maker_file_link)
+
+
+            stmt = mytable.update().where(mytable.c.id == maker_id).values( maker=maker,
+                                                                            category=category,
+                                                                            model_no=model_no,
+                                                                            description=description,
+                                                                            remarks=remarks,
+                                                                            symbol=symbol_link,
+                                                                            link=maker_file_link,
+                                                                            notes=notes)
+            with engine.connect() as conn:
+                result = conn.execute(stmt)
+
 
     def delete_maker_item(self, maker_id):
         engine = self.connect_to_db()

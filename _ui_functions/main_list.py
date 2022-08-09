@@ -41,21 +41,22 @@ class MakerTable:
                 print(column_number, column_data)
                 item = str(column_data)
                 # if item.isnumeric():
-                if column_number == 6:
-                    print('inside symbol', column_number)
-                   
-                    item = get_image_label(column_data)
+                if column_number == 0: id_no = item
+                if column_number == 2: category = item
+                
+                if column_number == 6:    
+                    print(id_no, category)           
+                    item = get_image_label(id_no, category, column_data)
                     self.ui.tbl_1.setCellWidget(row_number, column_number, item)
                 else:
                     self.ui.tbl_1.setItem(row_number, column_number, QTableWidgetItem(item))
 
 
 
-def get_image_label(image_path):
+def get_image_label(id_no, category, image_file):
     db = DataBase()
     root_path = db.get_db_root_path()
-    full_path = f'{root_path}\\{image_path}'
-    print(f'full path: {root_path} + {image_path}')
+    full_path = f'{root_path}\\FILES\{id_no}-{category}\\{image_file}'
     print(full_path)
     pixmap = QPixmap(full_path)
     pixmap = pixmap.scaled(150, 150, Qt.KeepAspectRatio, Qt.SmoothTransformation)

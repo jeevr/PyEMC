@@ -1,25 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainHCMjEW.ui'
+## Form generated from reading UI file 'mainlPiiZx.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.1
+## Created by: Qt User Interface Compiler version 6.1.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QComboBox, QFrame,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QListWidget, QListWidgetItem, QMainWindow, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
-    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -73,13 +65,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.btn_refresh)
 
-        self.btn_update = QPushButton(self.frm_buttons)
-        self.btn_update.setObjectName(u"btn_update")
-        self.btn_update.setMinimumSize(QSize(0, 30))
-        self.btn_update.setMaximumSize(QSize(100, 16777215))
-
-        self.horizontalLayout_3.addWidget(self.btn_update)
-
         self.btn_add = QPushButton(self.frm_buttons)
         self.btn_add.setObjectName(u"btn_add")
         self.btn_add.setMinimumSize(QSize(0, 30))
@@ -87,30 +72,23 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.btn_add)
 
+        self.btn_update = QPushButton(self.frm_buttons)
+        self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setMinimumSize(QSize(0, 30))
+        self.btn_update.setMaximumSize(QSize(100, 16777215))
+
+        self.horizontalLayout_3.addWidget(self.btn_update)
+
+        self.horizontalSpacer = QSpacerItem(700, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
         self.btn_delete = QPushButton(self.frm_buttons)
         self.btn_delete.setObjectName(u"btn_delete")
         self.btn_delete.setMinimumSize(QSize(0, 30))
         self.btn_delete.setMaximumSize(QSize(100, 16777215))
 
         self.horizontalLayout_3.addWidget(self.btn_delete)
-
-        self.horizontalSpacer = QSpacerItem(200, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_3.addItem(self.horizontalSpacer)
-
-        self.label_10 = QLabel(self.frm_buttons)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setMinimumSize(QSize(0, 30))
-        self.label_10.setMaximumSize(QSize(16777215, 30))
-
-        self.horizontalLayout_3.addWidget(self.label_10)
-
-        self.lineEdit = QLineEdit(self.frm_buttons)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(300, 30))
-        self.lineEdit.setClearButtonEnabled(True)
-
-        self.horizontalLayout_3.addWidget(self.lineEdit)
 
 
         self.verticalLayout.addWidget(self.frm_buttons, 0, Qt.AlignLeft)
@@ -121,6 +99,7 @@ class Ui_MainWindow(object):
         self.frm_table.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frm_table)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 10, 0, 0)
         self.frame_7 = QFrame(self.frm_table)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setFrameShape(QFrame.StyledPanel)
@@ -155,7 +134,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.cbo_filter_2)
 
-        self.horizontalSpacer_2 = QSpacerItem(50, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(100, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_5.addItem(self.horizontalSpacer_2)
 
@@ -166,17 +145,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9 = QHBoxLayout(self.frame_9)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.pushButton = QPushButton(self.frame_9)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(0, 30))
+        self.btn_apply_filter = QPushButton(self.frame_9)
+        self.btn_apply_filter.setObjectName(u"btn_apply_filter")
+        self.btn_apply_filter.setMinimumSize(QSize(0, 30))
 
-        self.horizontalLayout_9.addWidget(self.pushButton)
+        self.horizontalLayout_9.addWidget(self.btn_apply_filter)
 
-        self.pushButton_2 = QPushButton(self.frame_9)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(0, 30))
+        self.btn_clear_filter = QPushButton(self.frame_9)
+        self.btn_clear_filter.setObjectName(u"btn_clear_filter")
+        self.btn_clear_filter.setMinimumSize(QSize(0, 30))
 
-        self.horizontalLayout_9.addWidget(self.pushButton_2)
+        self.horizontalLayout_9.addWidget(self.btn_clear_filter)
 
 
         self.horizontalLayout_5.addWidget(self.frame_9)
@@ -371,28 +350,30 @@ class Ui_MainWindow(object):
         self.label_5.setGeometry(QRect(210, 220, 101, 16))
         self.txt_maker_link = QTextEdit(self.frame_5)
         self.txt_maker_link.setObjectName(u"txt_maker_link")
-        self.txt_maker_link.setGeometry(QRect(340, 250, 241, 31))
+        self.txt_maker_link.setEnabled(False)
+        self.txt_maker_link.setGeometry(QRect(340, 250, 241, 61))
         self.label_6 = QLabel(self.frame_5)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(210, 260, 101, 16))
         self.txt_symbol_link = QTextEdit(self.frame_5)
         self.txt_symbol_link.setObjectName(u"txt_symbol_link")
-        self.txt_symbol_link.setGeometry(QRect(340, 290, 241, 31))
+        self.txt_symbol_link.setEnabled(False)
+        self.txt_symbol_link.setGeometry(QRect(340, 320, 241, 61))
         self.label_7 = QLabel(self.frame_5)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(210, 300, 101, 16))
+        self.label_7.setGeometry(QRect(210, 330, 101, 16))
         self.btn_attach_file = QPushButton(self.frame_5)
         self.btn_attach_file.setObjectName(u"btn_attach_file")
         self.btn_attach_file.setGeometry(QRect(590, 250, 51, 31))
         self.btn_attach_symbol = QPushButton(self.frame_5)
         self.btn_attach_symbol.setObjectName(u"btn_attach_symbol")
-        self.btn_attach_symbol.setGeometry(QRect(590, 290, 51, 31))
+        self.btn_attach_symbol.setGeometry(QRect(590, 320, 51, 31))
         self.label_8 = QLabel(self.frame_5)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(210, 340, 101, 16))
+        self.label_8.setGeometry(QRect(210, 400, 101, 16))
         self.txt_notes = QTextEdit(self.frame_5)
         self.txt_notes.setObjectName(u"txt_notes")
-        self.txt_notes.setGeometry(QRect(340, 330, 241, 101))
+        self.txt_notes.setGeometry(QRect(340, 390, 241, 61))
         self.btn_add_category = QPushButton(self.frame_5)
         self.btn_add_category.setObjectName(u"btn_add_category")
         self.btn_add_category.setGeometry(QRect(590, 130, 51, 31))
@@ -432,7 +413,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -444,15 +425,12 @@ class Ui_MainWindow(object):
         self.btn_1.setText(QCoreApplication.translate("MainWindow", u"Search for Makers", None))
         self.btn_settings.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.btn_refresh.setText(QCoreApplication.translate("MainWindow", u"Refresh List", None))
-        self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Update Maker", None))
         self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add Maker", None))
+        self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Update Maker", None))
         self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"Delete Maker", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Search", None))
-        self.lineEdit.setInputMask("")
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"search maker here...", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Filter by:", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.btn_apply_filter.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.btn_clear_filter.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
         ___qtablewidgetitem = self.tbl_1.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.tbl_1.horizontalHeaderItem(1)
@@ -498,7 +476,6 @@ class Ui_MainWindow(object):
         self.txt_id.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Auto generated</p></body></html>", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"ID", None))
