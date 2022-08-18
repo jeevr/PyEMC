@@ -3,6 +3,10 @@ import os
 import sys
 from _ui_functions.database_data import DataBase
 
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+
 class AddNewMaker:
     def __init__(self) -> None:
         self.root_path = ''
@@ -50,3 +54,14 @@ class AddNewMaker:
             shutil.copy(file_link, file_dest)
         except:
             return 'ERROR COPYING FILE'
+
+    def preview_symbol(self, img_path, _label):
+        try:
+            print(img_path)
+            pixmap = QPixmap(img_path)
+            pixmap = pixmap.scaled(200, 70, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            _label.setText('')
+            _label.setPixmap(pixmap)
+            _label.setAlignment(Qt.AlignCenter)
+        except:
+            pass

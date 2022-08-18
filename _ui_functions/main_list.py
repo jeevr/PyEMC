@@ -60,6 +60,8 @@ def get_image_label(id_no, category, image_file):
     print(full_path)
     pixmap = QPixmap(full_path)
     pixmap = pixmap.scaled(150, 150, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+    # pixmap = pixmap.scaled(150, 30, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
+    # pixmap = pixmap.scaled(150, 30, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
     image_label = QLabel()
     image_label.setText('')
     image_label.setPixmap(pixmap)

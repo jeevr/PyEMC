@@ -100,7 +100,7 @@ class MainWindow(QMainWindow):
     def add_new_maker(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.sw_5)
 
-        self.ui.lbl_4.setText('Add New Maker Information')
+        self.ui.lbl_4.setText('<html><head/><body><p><span style=" font-size:16pt;">Add New Maker</span></p></body></html>')
         self.ui.btn_save_add.setVisible(True)
         self.ui.btn_save_update.setVisible(False)
         
@@ -147,7 +147,7 @@ class MainWindow(QMainWindow):
 
         self.ui.stackedWidget.setCurrentWidget(self.ui.sw_5)
 
-        self.ui.lbl_4.setText('Update Maker Information')
+        self.ui.lbl_4.setText('<html><head/><body><p><span style=" font-size:16pt;">Update Maker Information</span></p></body></html>')
         self.ui.btn_save_add.setVisible(False)
         self.ui.btn_save_update.setVisible(True)
 
@@ -263,6 +263,10 @@ class MainWindow(QMainWindow):
             self.ui.txt_maker_link.setText(sel_file)
         if for_type == 'SYMBOL':
             self.ui.txt_symbol_link.setText(sel_file)
+            # preview symbol
+            x_maker = AddNewMaker()
+            x_maker.preview_symbol(sel_file, self.ui.lbl_symbol_img)
+
         return sel_file
 
     def connect_to_backend_database(self):

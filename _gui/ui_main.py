@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainlPiiZx.ui'
+## Form generated from reading UI file 'mainTnbIrt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -243,12 +243,12 @@ class Ui_MainWindow(object):
         self.lbl_2.setGeometry(QRect(10, 170, 111, 16))
         self.txt_db_path = QTextEdit(self.frame_2)
         self.txt_db_path.setObjectName(u"txt_db_path")
-        self.txt_db_path.setGeometry(QRect(130, 160, 664, 30))
+        self.txt_db_path.setGeometry(QRect(130, 160, 661, 30))
         self.txt_db_path.setMaximumSize(QSize(16777215, 30))
         self.btn_sel_db_path = QPushButton(self.frame_2)
         self.btn_sel_db_path.setObjectName(u"btn_sel_db_path")
         self.btn_sel_db_path.setEnabled(True)
-        self.btn_sel_db_path.setGeometry(QRect(800, 160, 75, 30))
+        self.btn_sel_db_path.setGeometry(QRect(800, 160, 61, 30))
         self.btn_sel_db_path.setMaximumSize(QSize(16777215, 30))
         self.btn_sel_db_path.setCheckable(False)
         self.lbl_result = QLabel(self.frame_2)
@@ -314,6 +314,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.lbl_4 = QLabel(self.frame_6)
         self.lbl_4.setObjectName(u"lbl_4")
+        self.lbl_4.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_10.addWidget(self.lbl_4)
 
@@ -399,6 +400,11 @@ class Ui_MainWindow(object):
         self.btn_save_update = QPushButton(self.frame_5)
         self.btn_save_update.setObjectName(u"btn_save_update")
         self.btn_save_update.setGeometry(QRect(780, 440, 75, 31))
+        self.lbl_symbol_img = QLabel(self.frame_5)
+        self.lbl_symbol_img.setObjectName(u"lbl_symbol_img")
+        self.lbl_symbol_img.setGeometry(QRect(650, 320, 211, 71))
+        self.lbl_symbol_img.setFrameShape(QFrame.NoFrame)
+        self.lbl_symbol_img.setMidLineWidth(0)
 
         self.verticalLayout_4.addWidget(self.frame_5)
 
@@ -480,5 +486,6 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Auto generated</p></body></html>", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"ID", None))
         self.btn_save_update.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.lbl_symbol_img.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
     # retranslateUi
 
