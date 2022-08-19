@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainTnbIrt.ui'
+## Form generated from reading UI file 'mainKHFFiq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(938, 601)
+        MainWindow.resize(938, 611)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -272,25 +272,29 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(180, 110, 131, 16))
+        self.label.setGeometry(QRect(180, 200, 131, 31))
         self.txt_new_cat_entry = QTextEdit(self.frame_3)
         self.txt_new_cat_entry.setObjectName(u"txt_new_cat_entry")
-        self.txt_new_cat_entry.setGeometry(QRect(320, 110, 241, 31))
+        self.txt_new_cat_entry.setGeometry(QRect(320, 200, 241, 31))
         self.btn_add_cat = QPushButton(self.frame_3)
         self.btn_add_cat.setObjectName(u"btn_add_cat")
-        self.btn_add_cat.setGeometry(QRect(580, 110, 51, 31))
+        self.btn_add_cat.setGeometry(QRect(460, 240, 101, 31))
         self.btn_save_cat = QPushButton(self.frame_3)
         self.btn_save_cat.setObjectName(u"btn_save_cat")
         self.btn_save_cat.setGeometry(QRect(780, 510, 75, 31))
         self.lst_cat = QListWidget(self.frame_3)
         self.lst_cat.setObjectName(u"lst_cat")
-        self.lst_cat.setGeometry(QRect(320, 160, 241, 291))
+        self.lst_cat.setGeometry(QRect(320, 280, 241, 211))
         self.btn_remove_cat = QPushButton(self.frame_3)
         self.btn_remove_cat.setObjectName(u"btn_remove_cat")
-        self.btn_remove_cat.setGeometry(QRect(320, 460, 101, 31))
+        self.btn_remove_cat.setGeometry(QRect(320, 240, 101, 31))
         self.btn_cancel_cat = QPushButton(self.frame_3)
         self.btn_cancel_cat.setObjectName(u"btn_cancel_cat")
         self.btn_cancel_cat.setGeometry(QRect(30, 510, 75, 31))
+        self.label_10 = QLabel(self.frame_3)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(180, 10, 681, 141))
+        self.label_10.setWordWrap(False)
 
         self.horizontalLayout_7.addWidget(self.frame_3)
 
@@ -419,7 +423,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -461,10 +465,11 @@ class Ui_MainWindow(object):
         self.btn_sel_db_path.setText(QCoreApplication.translate("MainWindow", u"connect", None))
         self.lbl_result.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"NEW CATEGORY NAME", None))
-        self.btn_add_cat.setText(QCoreApplication.translate("MainWindow", u"add", None))
+        self.btn_add_cat.setText(QCoreApplication.translate("MainWindow", u"Add to List", None))
         self.btn_save_cat.setText(QCoreApplication.translate("MainWindow", u"Save", None))
-        self.btn_remove_cat.setText(QCoreApplication.translate("MainWindow", u"Delete Category", None))
+        self.btn_remove_cat.setText(QCoreApplication.translate("MainWindow", u"Delete Selected", None))
         self.btn_cancel_cat.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>*Notes:</p><p>1. Make sure that there are no leading or trailing spaces on the new category added.</p><p>2. When you want to delete category name, it will only be successful when there are no existing maker items in the table.</p><p>*You need to go back to the table to update the maker's category or delete maker entry.</p><p>3. Categories must be inputted in upper case.</p></body></html>", None))
         self.lbl_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Add New Maker / Update Maker</span></p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"MODEL NO", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"CATEGORY", None))

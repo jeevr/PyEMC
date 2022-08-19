@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'popupTrRLJp.ui'
+## Form generated from reading UI file 'popupdVgfaK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -17,21 +17,27 @@ class Ui_popup(object):
     def setupUi(self, popup):
         if not popup.objectName():
             popup.setObjectName(u"popup")
-        popup.resize(484, 284)
+        popup.resize(330, 146)
+        popup.setAutoFillBackground(False)
+        self.horizontalLayout_3 = QHBoxLayout(popup)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.frame_3 = QFrame(popup)
         self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setGeometry(QRect(20, 20, 451, 241))
-        self.frame_3.setFrameShape(QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.frame_3.setAutoFillBackground(False)
+        self.frame_3.setFrameShape(QFrame.Box)
+        self.frame_3.setFrameShadow(QFrame.Sunken)
         self.verticalLayout = QVBoxLayout(self.frame_3)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(50, 50, 50, 50)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.frame = QFrame(self.frame_3)
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(10, 10, 10, 10)
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setWordWrap(True)
@@ -66,6 +72,9 @@ class Ui_popup(object):
 
 
         self.verticalLayout.addWidget(self.frame_2)
+
+
+        self.horizontalLayout_3.addWidget(self.frame_3)
 
 
         self.retranslateUi(popup)

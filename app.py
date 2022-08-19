@@ -2,6 +2,7 @@
 from enum import unique
 import os
 import sys
+import shutil
 
 from _gui.ui_main import *
 from _gui.ui_popup import *
@@ -247,13 +248,42 @@ class MainWindow(QMainWindow):
         selected_row = self.ui.tbl_1.currentRow()
         
         index_val = self.ui.tbl_1.item(selected_row, 0).text()
-        index_val_x = self.ui.tbl_1.item(selected_row, 1).text()
-        print(selected_row, index_val, index_val_x)
+        index_val_cat = self.ui.tbl_1.item(selected_row, 2).text()
+        print('delete.............')
+        print(selected_row, index_val, index_val_cat)
 
         # DELETE ITEM FROM DATABASE
         db = DataBase()
         db.delete_maker_item(int(index_val))
         self.load_makers_table()
+
+        # DELETE ITEM IN DIRECTORY
+        root_path = db.db_root_path
+        folder_name = f'{index_val}-{index_val_cat}' # FOLDER RO TO DELETED
+        print('delete.... folder..')
+        print('root path', root_path)
+        print('folder to be deleted', folder_name)
+
+        path_to_delete = os.path.join(root_path, 'files', folder_name)
+
+        if len(os.listdir(path_to_delete)) > 0: # MEANS THERE IS/ARE ITEMS IN THE FOLDER
+            try:
+                # READ ALL FILES INSIDE THE FOLDER
+                for x_file in os.listdir(path_to_delete):
+                    curr_file_path = os.path.join(path_to_delete, x_file)
+                    try:
+                        os.remove(curr_file_path)
+                    except:
+                        f = open(curr_file_path, 'r')
+                        f.close()
+                        os.remove(curr_file_path)
+                
+                # FINALY DELETE FOLDER
+                os.rmdir(path_to_delete)
+            except OSError as e:
+                print(f'Error in deleting: {path_to_delete}, err: {e.sterror}')
+        else:
+            pass
 
     def select_file(self, for_type):
         fdialog = QFileDialog()
@@ -316,6 +346,8 @@ class MainWindow(QMainWindow):
                 self.ui.tbl_1.setRowHidden(row, False)
             else:
                 self.ui.tbl_1.setRowHidden(row, True)
+
+            print(filter_1, filter_2)
 
 
     def clear_filter(self):

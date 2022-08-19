@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>938</width>
-    <height>601</height>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>4</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="sw_1">
        <widget class="QLabel" name="lbl_welcome">
@@ -615,9 +615,9 @@
            <property name="geometry">
             <rect>
              <x>180</x>
-             <y>110</y>
+             <y>200</y>
              <width>131</width>
-             <height>16</height>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
@@ -628,7 +628,7 @@
            <property name="geometry">
             <rect>
              <x>320</x>
-             <y>110</y>
+             <y>200</y>
              <width>241</width>
              <height>31</height>
             </rect>
@@ -637,14 +637,14 @@
           <widget class="QPushButton" name="btn_add_cat">
            <property name="geometry">
             <rect>
-             <x>580</x>
-             <y>110</y>
-             <width>51</width>
+             <x>460</x>
+             <y>240</y>
+             <width>101</width>
              <height>31</height>
             </rect>
            </property>
            <property name="text">
-            <string>add</string>
+            <string>Add to List</string>
            </property>
           </widget>
           <widget class="QPushButton" name="btn_save_cat">
@@ -664,9 +664,9 @@
            <property name="geometry">
             <rect>
              <x>320</x>
-             <y>160</y>
+             <y>280</y>
              <width>241</width>
-             <height>291</height>
+             <height>211</height>
             </rect>
            </property>
           </widget>
@@ -674,13 +674,13 @@
            <property name="geometry">
             <rect>
              <x>320</x>
-             <y>460</y>
+             <y>240</y>
              <width>101</width>
              <height>31</height>
             </rect>
            </property>
            <property name="text">
-            <string>Delete Category</string>
+            <string>Delete Selected</string>
            </property>
           </widget>
           <widget class="QPushButton" name="btn_cancel_cat">
@@ -694,6 +694,22 @@
            </property>
            <property name="text">
             <string>Cancel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>10</y>
+             <width>681</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;*Notes:&lt;/p&gt;&lt;p&gt;1. Make sure that there are no leading or trailing spaces on the new category added.&lt;/p&gt;&lt;p&gt;2. When you want to delete category name, it will only be successful when there are no existing maker items in the table.&lt;/p&gt;&lt;p&gt;*You need to go back to the table to update the maker's category or delete maker entry.&lt;/p&gt;&lt;p&gt;3. Categories must be inputted in upper case.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="wordWrap">
+            <bool>false</bool>
            </property>
           </widget>
          </widget>
